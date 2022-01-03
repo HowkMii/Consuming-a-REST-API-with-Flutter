@@ -44,7 +44,8 @@ class NoteList extends StatelessWidget {
               notes[index].noteTitle,
               style: TextStyle(color: Theme.of(context).primaryColor),
             ),
-            subtitle: Text('Last edited on ${notes[index].lastEditDateTime}'),
+            subtitle: Text(
+                'Last edited on ${formatDateTime(notes[index].lastEditDateTime)}'),
           );
         },
         itemCount: notes.length,
