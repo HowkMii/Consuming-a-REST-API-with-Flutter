@@ -7,22 +7,22 @@ class NoteList extends StatelessWidget {
         noteID: "1",
         createDateTime: DateTime.now(),
         lastEditDateTime: DateTime.now(),
-        NoteTitle: "Note 1"),
+        noteTitle: "Note 1"),
     new NoteForListing(
         noteID: "2",
         createDateTime: DateTime.now(),
         lastEditDateTime: DateTime.now(),
-        NoteTitle: "Note 2"),
+        noteTitle: "Note 2"),
     new NoteForListing(
         noteID: "3",
         createDateTime: DateTime.now(),
         lastEditDateTime: DateTime.now(),
-        NoteTitle: "Note 3"),
+        noteTitle: "Note 3"),
     new NoteForListing(
         noteID: "4",
         createDateTime: DateTime.now(),
         lastEditDateTime: DateTime.now(),
-        NoteTitle: "Note 4"),
+        noteTitle: "Note 4"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,13 +37,13 @@ class NoteList extends StatelessWidget {
         itemBuilder: (_, index) {
           return ListTile(
             title: Text(
-              'Hello',
+              notes[index].noteTitle,
               style: TextStyle(color: Theme.of(context).primaryColor),
             ),
             subtitle: Text('Last edited on 21/2/2021'),
           );
         },
-        itemCount: 30,
+        itemCount: notes.length,
       ),
     );
   }
